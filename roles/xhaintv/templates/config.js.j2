@@ -111,10 +111,21 @@ let config = {
                 stationId: "900120014",
                 marqueeLongDirections: false,
                 travelTimeToStation: 2,
-                maxReachableDepartures: 8,
+                maxReachableDepartures: 6,
                 fadeReachableDepartures: false
             },
         },
+        {
+            module: "MMM-PublicTransportBerlin",
+            position: "bottom_bar", // This can be any of the regions.
+            config: {
+                stationId: "900120008",
+                marqueeLongDirections: false,
+                ignoredLines: ['M10']
+                travelTimeToStation: 7,
+                maxReachableDepartures: -,
+                fadeReachableDepartures: false
+        }
     ]
 };
 
