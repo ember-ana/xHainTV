@@ -20,7 +20,8 @@ let config = {
     timeFormat: 24,
     units: "metric",
 
-    modules: [{
+    modules: [
+        {
             module: "alert",
         },
         {
@@ -54,11 +55,13 @@ let config = {
                 fade: false,
                 maximumEntries: 12,
                 // fadePoint: 0.1,
-                calendars: [{
-                    fetchInterval: 7 * 24 * 60 * 60 * 1000,
-                    symbol: "calendar",
-                    url: "https://files.x-hain.de/remote.php/dav/public-calendars/Yi63cicwgDnjaBHR/?export&accept=ical",
-                }],
+                calendars: [
+                    {
+                        fetchInterval: 7 * 24 * 60 * 60 * 1000,
+                        symbol: "calendar",
+                        url: "https://files.x-hain.de/remote.php/dav/public-calendars/Yi63cicwgDnjaBHR/?export&accept=ical",
+                    },
+                ],
             },
         },
         {
