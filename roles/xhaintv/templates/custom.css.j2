@@ -10,9 +10,11 @@
 
 :root {
   --color-text: #999;
-  --color-text-dimmed: #AED919;
+  --color-text-callout: #ccc;
+  --color-text-dimmed: #aed919;
   --color-text-bright: #fff;
-  --color-background: black;
+  --color-background: #000;
+  --color-background-callout: #1a1a1a;
 
   --font-primary: "Roboto Condensed";
   --font-secondary: "Roboto";
@@ -27,3 +29,23 @@
 
   --gap-modules: 30px;
 }
+
+.region.middle.center {
+  .module.calendar tr.event-wrapper.event {
+    > td.title {
+      text-align: left;
+    }
+    &.today {
+      background-color: var(--color-background-callout);
+
+      > td.symbol,
+      > td.time {
+        color: var(--color-text-callout);
+      }
+      > td.title {
+        font-weight: 600;
+      }
+    }
+  }
+}
+
