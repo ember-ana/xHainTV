@@ -30,16 +30,26 @@
   --gap-modules: 30px;
 }
 
+/**
+ * prettify the event calendar
+ * @see [xHain-hackspace/xHainTV#7](https://github.com/xHain-hackspace/xHainTV/pull/7)
+ */
 .region.middle.center {
+  /* the event calendar is the one in the middle
+     therefore, select the middle region, then all calendar events inside it */
   .module.calendar tr.event-wrapper.event {
+    /* titles often start with a specifier, like "xDays:"
+       those being aligned reduces cognitive load */
     > td.title {
       text-align: left;
     }
+    /* make present visually distinct from future */
     &.today {
       background-color: var(--color-background-callout);
 
       > td.symbol,
       > td.time {
+        /* contrast becomes too low without also increasing the brightness of these */
         color: var(--color-text-callout);
       }
       > td.title {
@@ -48,4 +58,3 @@
     }
   }
 }
-
